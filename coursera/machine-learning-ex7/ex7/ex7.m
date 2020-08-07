@@ -167,7 +167,7 @@ title('Original');
 subplot(1, 2, 2);
 imagesc(X_recovered)
 title(sprintf('Compressed, with %d colors.', K));
-
+print -dpng 'figure3.png'
 
 fprintf('Program paused. Press enter to continue.\n');
 pause;

@@ -35,6 +35,8 @@ load ('ex7data1.mat');
 plot(X(:, 1), X(:, 2), 'bo');
 axis([0.5 6.5 2 8]); axis square;
 
+print -dpng 'figure4.png'
+
 fprintf('Program paused. Press enter to continue.\n');
 pause;
 
@@ -59,6 +61,8 @@ hold on;
 drawLine(mu, mu + 1.5 * S(1,1) * U(:,1)', '-k', 'LineWidth', 2);
 drawLine(mu, mu + 1.5 * S(2,2) * U(:,2)', '-k', 'LineWidth', 2);
 hold off;
+
+print -dpng 'figure5.png'
 
 fprintf('Top eigenvector: \n');
 fprintf(' U(:,1) = %f %f \n', U(1,1), U(2,1));
@@ -99,6 +103,7 @@ for i = 1:size(X_norm, 1)
     drawLine(X_norm(i,:), X_rec(i,:), '--k', 'LineWidth', 1);
 end
 hold off
+print -dpng 'figure6.png'
 
 fprintf('Program paused. Press enter to continue.\n');
 pause;
@@ -114,6 +119,7 @@ load ('ex7faces.mat')
 
 %  Display the first 100 faces in the dataset
 displayData(X(1:100, :));
+print -dpng 'figure7.png'
 
 fprintf('Program paused. Press enter to continue.\n');
 pause;
@@ -134,6 +140,7 @@ fprintf(['\nRunning PCA on face dataset.\n' ...
 
 %  Visualize the top 36 eigenvectors found
 displayData(U(:, 1:36)');
+print -dpng 'figure8.png'
 
 fprintf('Program paused. Press enter to continue.\n');
 pause;
@@ -174,6 +181,7 @@ subplot(1, 2, 2);
 displayData(X_rec(1:100,:));
 title('Recovered faces');
 axis square;
+print -dpng 'figure9.png'
 
 fprintf('Program paused. Press enter to continue.\n');
 pause;
@@ -214,6 +222,7 @@ colors = palette(idx(sel), :);
 figure;
 scatter3(X(sel, 1), X(sel, 2), X(sel, 3), 10, colors);
 title('Pixel dataset plotted in 3D. Color shows centroid memberships');
+print -dpng 'figure10.png'
 fprintf('Program paused. Press enter to continue.\n');
 pause;
 
@@ -231,5 +240,6 @@ Z = projectData(X_norm, U, 2);
 figure;
 plotDataPoints(Z(sel, :), idx(sel), K);
 title('Pixel dataset plotted in 2D, using PCA for dimensionality reduction');
+print -dpng 'figure11.png'
 fprintf('Program paused. Press enter to continue.\n');
 pause;

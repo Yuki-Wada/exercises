@@ -48,6 +48,7 @@ for i=1:max_iters
         plotProgresskMeans(X, centroids, previous_centroids, idx, K, i);
         previous_centroids = centroids;
         fprintf('Press enter to continue.\n');
+        print -dpng 'figure1.png'
         pause;
     end
     
