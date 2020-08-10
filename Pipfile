@@ -11,6 +11,7 @@ matplotlib = "*"
 regex = "*"
 requests = "*"
 ipykernel = "*"
+gensim = "*"
 
 [requires]
 python_version = "3.7"

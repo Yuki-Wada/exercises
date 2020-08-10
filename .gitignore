@@ -1,5 +1,8 @@
 .vscode/
 .ipynb_checkpoints/
+homebuilt_os_vm/
 docker
 *.pdf
+*.img
+nlp_100_knock/Question_60_69/GoogleNews-vectors-negative300.bin.gz
 start_jupyter.sh
