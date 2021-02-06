@@ -2,3 +2,4 @@
 *.png binary
 *.mat binary
 *.jpg binary
+*.ipynb binary
